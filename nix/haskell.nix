@@ -1,7 +1,7 @@
 ############################################################################
 # Builds Haskell packages with Haskell.nix
 ############################################################################
-haskell-nix: haskell-nix.cabalProject' (
+{ haskell-nix, CHaP }: haskell-nix.cabalProject' (
   { pkgs
   , lib
   , config
@@ -23,6 +23,10 @@ haskell-nix: haskell-nix.cabalProject' (
   in
   {
     src = haskell-nix.cleanSourceHaskell { name = "cardano-addresses-src"; src = ../.; };
+
+    inputMap = {
+      "https://input-output-hk.github.io/cardano-haskell-packages" = CHaP;
+    };
 
     # because src is filtered, (src + "./file") does not yet work with flake without https://github.com/NixOS/nix/pull/5163
     # So we avoid this idiom:

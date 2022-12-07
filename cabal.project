@@ -28,6 +28,7 @@ packages:
 allow-newer:
     hjsonschema:QuickCheck
   , hjsonschema:aeson
+  , hjsonschema:containers
   , hjsonschema:hashable
   , hjsonschema:hjsonpointer
   , hjsonschema:protolude
