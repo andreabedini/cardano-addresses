@@ -51,7 +51,7 @@ haskell-nix: haskell-nix.cabalProject' (
       crossPlatforms = p: [ p.ghcjs ];
       tools = {
         hpack.version = "latest";
-        haskell-language-server.version = "latest";
+        haskell-language-server.version = "1.8.0.0";
       };
       nativeBuildInputs = with pkgs; [ nodejs nixWrapped cabalWrapped ];
       packages = ps:
