@@ -816,7 +816,7 @@
         "iohkNix": "iohkNix",
         "nixpkgs": [
           "haskellNix",
-          "nixpkgs-2205"
+          "nixpkgs-2111"
         ]
       }
     },

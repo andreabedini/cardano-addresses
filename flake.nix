@@ -2,15 +2,15 @@
   description = "Cardano Addresses";
 
   inputs = {
-    nixpkgs.follows = "haskellNix/nixpkgs-2205";
+    nixpkgs.follows = "haskellNix/nixpkgs-2111";
     hackageNix = {
       url = "github:input-output-hk/hackage.nix";
       flake = false;
     };
     haskellNix = {
       url = "github:input-output-hk/haskell.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
       inputs.hackage.follows = "hackageNix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils.url = "github:numtide/flake-utils";
     iohkNix = {
